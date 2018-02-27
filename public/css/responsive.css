@@ -1,0 +1,174 @@
+@media screen and (max-width: 1143px){
+	#wp-content{
+		width: 100%;
+		margin: 0px auto;
+	}
+	ul#tq-menu li{
+		font-size: 15px;
+	}
+	ul#at-menu li p{
+		font-size: 15px;
+	}
+	ul#ft-menu li a {
+		font-size: 15px;
+		padding: 11px 55px;
+	}
+}
+@media screen and (max-width: 1024px){
+	.parallax{
+		background-attachment: local;
+	}
+	ul#main-menu li a {
+	    font-size: 14px;
+	}
+	.tittle p {
+	    font-size: 55px;
+	}
+	.ct-header{
+		font-size: 21px;
+	}
+	.gt-img{
+		max-width: 440px;
+	}
+	
+	ul#tq-menu li {
+	    padding: 9px 15px;
+	}
+    p.p2 {
+	    margin: 23px 32px;
+	}
+	img#tq {
+	    max-width: 99%;
+	    height: auto;
+	    margin: 0px 4px;
+	}
+	ul#at-menu li p {
+	    font-size: 15px;
+	    padding: 3px 20px;
+	}
+	
+	.t-menu p {
+	    margin: 5px 67px;
+	}
+	.t-menu a {
+	    font-size: 17px;
+	    padding: 23px 30px;
+	}
+	.ct-content1 {
+	    margin: 0px 38px;
+	}
+	ul#ft-menu li a {
+	    font-size: 15px;
+	    padding: 3px 48px;
+	}
+	.tittle{
+		padding-top: 127px;
+	}
+	ul#at-img li img {
+	    
+	    width: 236px;
+	}
+	p.p1 {
+	    font-size: 16px;
+	}
+	p.p2 {
+	    font-size: 16px;
+	}
+}
+@media screen and (max-width: 768px){
+	ul#main-menu li a {
+	    font-size: 16px;
+	    padding: 0px 7px;
+	}
+	.tittle {
+	    padding-top: 235px;
+	}
+	.tittle p {
+	    font-size: 50px;
+	}
+	p.p1 {
+	    max-width: 750px;
+	    margin: 0px auto;
+	}
+	p.p2 {
+	    font-size: 16px;
+	}
+	ul#tq-menu li {
+	    font-size: 15px;
+	    padding: 2px 8px;
+	    margin-left: 2px;
+	}
+	img#tq {
+	    max-width: 97%;
+	    height: auto;
+	    margin: 0px 9px;
+	}
+	#at-img img {
+	    max-width: 236px;
+	}
+	.t-menu a {
+	    padding: 13px 30px;
+	    font-size: 15px
+	}
+	.ct-content1 {
+	    margin: 0px 21px;
+	}
+	ul#ft-menu li a {
+	    font-size: 15px;
+	    padding: 3px 47px;
+	}
+	.t-header{
+		font-size: 38px;
+		padding-top: 28%;
+	}
+}
+@media screen and (max-width: 480px){
+	ul#main-menu li a {
+	    font-size: 16px;
+	    padding: 0px 35px;
+	}	
+	.tittle p {
+	    font-size: 50px;
+	    line-height: 58px;
+	    margin-top: -68px;
+	}
+	p.p1 {
+	    max-width: 750px;
+	    margin: 0px 5px;
+	}
+	ul#tq-menu li {
+	    font-size: 15px;
+	    padding: 3px 3px;
+	    margin-left: 36px;
+	    margin-bottom: 8px;
+	}	
+	ul#at-img li img {
+	    width: 221px;
+	}
+	.t-menu p {
+	    margin: 5px 27px;
+	}
+	.t-menu a {
+	    padding: 12px 0px;
+	    font-size: 15px;
+	}
+	.ct-content1 {
+
+	    float: none;
+	    margin: 0px auto;
+	}
+	ul#ft-menu li a {
+	    margin: 8px 35px;
+    }
+    ul#ft-menu li a {
+
+	    font-size: 15px;
+	    padding: 3px 16px;
+
+	}
+}
+@media screen and (max-width: 320px){
+	body {
+		background-color: violet;
+	}
+}

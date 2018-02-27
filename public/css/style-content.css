@@ -1,0 +1,314 @@
+.center{
+	margin: 0px auto;
+}
+/*Style Header*/
+
+	a#logo{
+		display: block;
+		padding: 3px 0px;
+	}
+	a#logo img{
+		display: block;
+	}
+	ul#main-menu li {
+		float: left;
+	}
+	ul#main-menu li a{
+		font-size: 16px;
+		padding: 40px 10px;
+		display: block;
+		color: #d0d0d0;
+		word-spacing: 3px;
+	}
+	ul#main-menu li a:hover{
+		color: #FFFFFF;
+	}
+	.tittle{
+		text-align: center;
+	    padding-top: 200px;
+	}
+	.tittle p{
+		font-family: ScriptMTBold;
+		font-size: 63px;
+		color: #FFFFFF;
+	}
+	.header{
+		margin-bottom: 100px; 
+	}
+	.t-menu{
+		margin-bottom: 100px;
+	}
+
+/*Style Content*/
+
+.ct-header{
+	font-family: Segoeuib;
+	font-size: 26px;
+	line-height: 44px;
+	text-align: center;
+	margin-bottom: 41px;
+}
+.text-center{
+	text-align: center;
+}
+.ct-text{
+	text-align: center;
+}
+
+
+
+/*Style giới thiệu*/
+p.p1{
+	max-width: 710px;
+	margin: 0px auto;
+}
+p.p2{
+	margin-bottom: 24px;
+}
+
+#gioithieu{
+	margin-bottom: 100px;
+}
+.gt-img{
+		max-width: 505px;
+		margin: 0px auto;
+	}
+	img#gt-img {
+		max-width: 100%;
+		height: auto;
+	}
+/*end*/
+
+/*Style Địa điểm tham quan*/
+ul#tq-menu li{
+	float: left;
+}
+ul#tq-menu li{
+	font-family: Segoeui;
+	font-size: 18px;
+	padding: 9px 15px;
+	border: 1px solid black;
+	margin-left: 25px;
+	cursor: pointer;
+}
+ul#tq-menu li:hover{
+	color: #ec681a;
+	background-color: #363636;
+	border: 1px solid #ec681a;
+}
+.tq-menu{
+	margin-bottom: 28px;
+}
+#diadiemthamquan{
+	margin-bottom: 100px;
+}
+
+img#tq:hover{
+	transition: 0.3s;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(39, 39, 39, 0.81);
+}
+.tq-img{
+	max-width: 1143px;
+}
+img#tq {
+	max-width: 100%;
+	height: auto;
+}
+
+/*Style Ẩm thực*/
+.at-menu{
+	margin-bottom: 22px;
+}
+ul#at-menu li {
+	float: left;
+		
+		margin-right: 3px;
+}
+ul#at-menu li p{
+	font-family: Segoeui;
+	font-size: 18px;
+	color: #151515;
+	padding: 9px 20px;
+	border-left:1px solid #111111;
+	border-right: 1px solid #111111;
+	cursor: pointer;
+}
+ul#at-menu li p:hover{
+	border-top: 2px solid #111111;
+	border-left:2px solid #111111;
+	border-right: 2px solid #111111;
+}
+#amthuc{
+	margin-bottom: 100px;
+}
+
+ul#at-img li {
+	float: left;
+	margin-left: 13px;
+	margin-bottom: 13px;
+}
+
+/*Style Tour*/
+
+.t-header{
+	font-size: 44px;
+	font-family: Segoeuib;
+	line-height: 44px;
+	padding-top: 15%;
+	color: #f5fdd2;
+	border-bottom: 2px solid #f5fdd2;
+	text-align: center;
+}
+.t-menu {
+	margin-top: 46px;
+}
+.t-menu{
+	float: left;
+}
+.t-menu p{
+	margin: 29px 70px;
+}
+.t-menu a{
+	text-align: center;
+	padding: 22px 50px;
+	font-size: 13px;
+	font-family: Segoeuib;
+	line-height: 44px;
+	margin: 14px 0px;
+	color: #ff471a;
+}
+
+.t-menu a:hover{
+		color: #ffffff;
+		background-color: #573939;
+}
+.t-content{
+	max-width: 812px;
+	margin:0px auto;
+}
+
+/*Style Contact*/
+.ct-content{
+	max-width: 1000px;
+	margin:0px auto;
+}
+.ct-content1{
+max-width: 236px;
+margin: 0px 51px;
+	text-align: center;
+}
+
+.contact{
+	margin-bottom: 100px;
+}
+
+
+/*Style Footer*/
+#footer{
+	background-color: #333333;
+}
+
+.footer{
+	text-align: center;
+}
+.footer img{
+	margin-top: 5px;
+
+}
+ul#ft-menu2 li {
+	float: left;
+}
+ul#ft-menu2 li a{
+	font-family: Lato;
+	font-size: 20px;
+	line-height: 25px;
+	color: #ffffff;
+	padding: 11px 45px;
+	display: block;
+	margin: 8px 52px;
+	border: 1px solid #ffffff;
+}
+
+ul#ft-menu2 li a:hover{
+	color: #ffce6b;
+	background-color: #ffffff;
+}
+.ft-menu1, .ft-menu2{
+	max-width: 816px;
+	margin:0px auto;
+}
+ul#ft-menu1 li {
+		float: left;
+	}
+ul#ft-menu1 li a {
+    font-size: 16px;
+    padding: 20px 22px 40px 28px;
+    display: block;
+    color: #d0d0d0;
+    word-spacing: 3px;
+}
+ul#ft-menu1 li a:hover{
+	color: #FFFFFF;
+}
+
+/*JS*/
+.tabct2, .tabct3, .tabct4, .tabct5,.tabct6, .tabct7,.tabct8{
+	display: none;
+}
+
+.active {
+	color: #ec681a;
+	background-color: #363636;
+	border: 1px solid #ec681a;
+}
+.active1 {
+border-top: 2px solid #111111;
+	border-left:2px solid #111111;
+	border-right: 2px solid #111111;
+}
+.tabat2, .tabat3,.tabat4{
+	display: none;
+}
+/*Hiệu ứng cho mỗi ảnh của ẩm thực*/
+ul#at-img li img:hover {
+	 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(39, 39, 39, 0.81);
+}
+ul#at-img li img {
+  transition: 0.3s;
+}
+
+/*Hiện Menu khi scroll chuột*/
+
+	.hd-inner2 {
+	    position: fixed;
+	    background: rgba(0, 0, 0, 0.76);
+	    color: #f1f1f1;
+	    width: 100%;
+	    display: none;
+	}
+	.logo1{
+		width:220px;
+	}
+	.logo1 img{
+		width: 100%;
+	}
+		a#logo1{
+		display: block;
+		padding: 3px 0px;
+	}
+	a#logo1 img{
+		display: block;
+	}
+	ul#main-menu1 li {
+		float: left;
+	}
+	ul#main-menu1 li a{
+		font-size: 16px;
+		padding: 27px 10px;
+		display: block;
+		color: #d0d0d0;
+		word-spacing: 3px;
+	}
+	ul#main-menu1 li a:hover{
+		color: #FFFFFF;
+	}
