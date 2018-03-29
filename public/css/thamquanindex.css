@@ -1,0 +1,76 @@
+.thamquanindex-content{
+	width: 100%;
+	min-height: 580px;
+	margin-bottom: 50px;
+}
+.thamquanIDA{
+	width: 100%;
+	height: auto;
+	margin-bottom: 100px;
+}
+
+img#thamquanIDbgA {
+	width: 100%;
+	height: auto;
+
+}
+
+.thamquanID-tieude{
+width: auto;
+height: auto;
+
+}
+.thamquanID-tieude p{
+font-size: 52px;
+color: black;
+font-family: 'ArimaMadurai-Medium','Lato';
+
+text-align: center;
+margin: 32px;
+	
+}
+
+.thamquanID-text{
+
+width: 700px;
+height: auto;
+margin: 0px auto;
+}
+
+.thamquanID-text p{
+
+ padding: 15px;
+ text-align: center;
+}
+.thamquan-more{
+	margin: 16px auto;
+width: 111px;
+height: auto;
+}
+a#thamquan-more{
+	padding: 10px 20px;
+	font-size: 15px;
+	text-align: center;
+	cursor: pointer;
+	width: 150px;
+	height: auto;
+	margin: 5px auto;
+	transition: 0.7s;
+	border-radius: 3px;
+	border: 1px solid #8d8d8d;
+	color: black;
+}
+
+a#thamquan-more:hover{
+color: white;
+background-color: #7a3b3b;
+}
+
+.timeline{
+	text-align: center;
+}
+
+.timeline{
+	width: auto;
+    height: 80px;text-align: center;
+}

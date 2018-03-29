@@ -13,7 +13,7 @@
 	<script src="js/jquery-3.2.1.min.js"></script>
 	<script src="js/tour-chi-tiet.js"></script>
 	<title>Tour chi tiết</title>
-	
+	{!! $map['js'] !!}
 	
 </head>
 <body>
@@ -36,7 +36,12 @@
 			</div>
 			<div class="tour-ct-button">
 				<p>{{$tour->gianguoilon}} VND</p>
-				<a class="book" href="">ĐẶT NGAY</a>
+				
+				@if($tour->sochoconlai == 0)
+					<p id="bookhetcho">HẾT CHỖ</p>
+				@else
+					<a class="book" href="dattour/{{$tour->id}}/{{$tour->tieudekhongdau}}.html">ĐẶT NGAY</a>
+				@endif
 			</div>
 			</div>
 		</div>
@@ -64,9 +69,9 @@
 					<div class="tour-ct-tittle1 clearfix">
 						<p>ĐIỂM THAM QUAN</p>
 					</div>
-					
+					<!-- MAP -->
 					<div class="tour-ct-map">
-						<img src="images/tour/BANDO-840x440.PNG" alt="">
+						{!! $map['html'] !!}
 					</div>
 					
 		
@@ -152,15 +157,7 @@
 								<p>Tên khách sạn</p>
 							</div>
 							<div class="chitietphai">
-								<p>{{$tour->khachsan->ten}}</p>
-							</div>
-						</div>
-						<div class="chitiet1 clearfix">
-							<div class="chitiettrai">
-								<p>Địa chỉ</p>						
-							</div>
-							<div class="chitietphai">
-								<p>{{$tour->khachsan->diachi}}</p>	
+								<p><a href="{{$tour->khachsan->url}}" target="_blank">{{$tour->khachsan->ten}}</a></p>
 							</div>
 						</div>
 					</div>
@@ -256,39 +253,7 @@
 				</div>
 			</div>
 		<!-- SideBar -->
-			<div class="tour-content-side-bar">
-				<div class="margin10px">
-					
-					<div class="sidebar-tour center">
-						<p class="sidebar-header">TOUR MỚI NHẤT</p>
-						
-						@foreach($tourmoinhat as $tmn)
-						<div class="marginbottom10px">
-							<div class="img270x142">
-								<img id="thumn2" src="images/tour/{{$tmn->anhtour->thumn2}}" alt="">
-							</div>
-													
-							<a class="sidebar-tittle clearfix" href="">{{ $tmn->tieude }}</a>
-						</div>
-						@endforeach	
-						
-
-					</div>
-
-					<div class="sidebar-diadiem center">
-						<p class="sidebar-header">ĐỊA ĐIỂM NỔI BẬT</p>
-						
-						<div class="marginbottom10px">
-							<div class="img270x142">
-								<img src="images/tour/anh-slide-bar-2-270x142.jpg" alt="">
-							</div>
-							<a class="sidebar-tittle clearfix" href="">BẾN NINH KIỀU</a>
-						</div>
-
-						
-					</div>
-				</div>
-			</div>
+			@include('layout.tourcontentsidebar')
 		<!--End SideBar -->
 		</div>
 	<!-- End content -->

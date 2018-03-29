@@ -7,6 +7,7 @@
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/style-content.css">
+	<link rel="stylesheet" href="css/tour.css">
 <!-- 	<link rel="stylesheet" href="css/responsive.css"> -->
 
 	<script src="js/jquery-3.2.1.min.js"></script>
@@ -41,10 +42,11 @@
 					</div>
 				</div>
 			</div>	
-		<div id="wp-content" class="wp-inner">	
+			
 			@include('layout.tour')
 
 <!-- CONTACT -->
+		<div id="wp-content" class="wp-inner">
 			@include('layout.contact')
 		</div>
 

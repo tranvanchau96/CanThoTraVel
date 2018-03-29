@@ -41,7 +41,15 @@ $(document).ready(function (){
       // Ngược lại, nhỏ hơn 150px thì hide menu đi.
             TopFixMenu2.slideUp(300);
         }}
-    )
+    );
+
+    
+
 
  
 });
+
+function search(obj){
+      var value  = obj.value;
+       window.location.href = value;
+    }

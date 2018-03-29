@@ -8,7 +8,7 @@
 						<ul id="main-menu" class="fl-right">
 							<li><a href="">TRANG CHỦ</a></li>
 							<li><a href="tour.html">TOUR</a></li>
-							<li><a href="">VÉ THAM QUAN</a></li>
+							<li><a href="thamquan.html">ĐIỂM THAM QUAN</a></li>
 							<li><a href="">KHÁCH SẠN</a></li>
 							<li><a href="">ẨM THỰC</a></li>
 							<li><a href="">CONTACT</a></li>
@@ -22,8 +22,8 @@
 						</div>
 						<ul id="main-menu1" class="fl-right">
 							<li><a href="">TRANG CHỦ</a></li>
-							<li><a href="">TOUR</a></li>
-							<li><a href="">VÉ THAM QUAN</a></li>
+							<li><a href="tour.html">TOUR</a></li>
+							<li><a href="thamquan.html">ĐIỂM THAM QUAN</a></li>
 							<li><a href="">KHÁCH SẠN</a></li>
 							<li><a href="">ẨM THỰC</a></li>
 							<li><a href="">CONTACT</a></li>

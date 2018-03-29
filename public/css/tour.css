@@ -65,14 +65,17 @@ body {
 	margin: 10px;
 	font-family: Segoeui;
 	font-size: 18px;
+	padding: 5px 0px;
 }
 
-
+.center{
+	width: 600px;
+}
 .select-tour{
 
 	cursor: pointer;
 	float: left;
-
+margin: 5px 10px 5px 0px;
 	/*display: block;*/
 	padding: 10px 17px;
 	font-size: 14px;
@@ -144,6 +147,7 @@ hr.hr-tour {
 }
 .content-tour-text{
 	font-size: 14px;
+	width: 554px;
 }
 .details{
 	margin-bottom: 8px;
@@ -154,17 +158,45 @@ hr.hr-tour {
 	float: left;
 	padding: 67px 35px;
 }
-.content-tour-price p{
+p#giatong{
 	font-weight: bold;
 	color: #ff0000;
 	font-size: 20px;
 	margin-bottom: 16px;
 }
+p#hetcho{
+	background-color: #0b00b9;
+	color: #ffffff;
+	padding: 15px 33px;
+	margin-top: -13px;
+}
+
 .content-tour-price a{
 	background-color: #e63900;
 	color: #ffffff;
 	padding: 15px 33px;
 }
+
+
 .content-tour-price a:hover{
 		background-color: #ff0606;
+}
+.tour-search1{
+	float: left;
+}
+
+.tour-tim a{
+	margin: 9px 0px 9px 11px;
+	padding: 5px 28px;
+	float: left; 
+	border: 1px solid #555555;
+	cursor: pointer;
+	border-radius: 5px;
+	color: black;
+}
+
+
+.tour-tim a:hover{
+	background-color: #816a6a;
+	color: white;
 }

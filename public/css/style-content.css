@@ -186,6 +186,30 @@ ul#at-img li {
 	max-width: 812px;
 	margin:0px auto;
 }
+.tour-list{
+	width: 1143px;
+	margin: 50px auto;
+}
+
+.index-tour-xemthem{
+
+}
+.index-tour-xemthem p{
+	font-size: 18px;
+	text-align: center;
+	padding: 10px 20px;
+	width: 165px;
+	margin: 0px auto;
+	background: #ff4d4d;
+	cursor: pointer;
+}
+.index-tour-xemthem p:hover{
+	background: #ff0000;
+}
+.index-tour-xemthem a{
+	color: #ffffff;
+}
+
 
 /*Style Contact*/
 .ct-content{
@@ -234,7 +258,7 @@ ul#ft-menu2 li a:hover{
 	background-color: #ffffff;
 }
 .ft-menu1, .ft-menu2{
-	max-width: 816px;
+	max-width: 840px;
 	margin:0px auto;
 }
 ul#ft-menu1 li {
@@ -312,3 +336,4 @@ ul#at-img li img {
 	ul#main-menu1 li a:hover{
 		color: #FFFFFF;
 	}
+

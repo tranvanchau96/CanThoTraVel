@@ -179,6 +179,14 @@ a.book{
 	color: #ffffff;
 	padding: 8px 40px;
 }
+p#bookhetcho{
+background-color: #0b00b9;
+color: #ffffff;
+padding: 5px 40px;
+
+width: 200px;
+margin: 0px auto;
+}
 a.book:hover{
 	background-color: #ff0606;
 }
