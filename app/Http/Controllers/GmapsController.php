@@ -9,17 +9,17 @@ class GmapsController extends Controller
 {
     //
      //
-    function getDanhSach(){
+    public function getDanhSach(){
     	$gmap = Gmaps_geocaches::all();
     	return view('admin.gmaps_geocache.danhsach',['gmap'=>$gmap]);
     }
 
-    function getThem(){
+    public function getThem(){
     	$gmap = Gmaps_geocaches::all();
     	return view('admin.gmaps_geocache.them');
     }
 
-    function postThem(Request $rq){
+    public function postThem(Request $rq){
     	$this->validate($rq,
     		[
     			'address'=>'required|unique:gmaps_geocache',
@@ -45,11 +45,11 @@ class GmapsController extends Controller
     	return redirect('admin/gmaps_geocache/them')->with('thongbao','Đã thêm thành công');
 	}
 
-	function  getSua($id){
+	public function  getSua($id){
 		$gmap = Gmaps_geocaches::find($id);
 		return view('admin.gmaps_geocache.sua',['gmap'=>$gmap]);
 	}
-	function  postSua(Request $rq, $id){
+	public function  postSua(Request $rq, $id){
 		$gmap = Gmaps_geocaches::find($id);
 		$this->validate($rq, 
 			[
@@ -71,7 +71,7 @@ class GmapsController extends Controller
     	return redirect('admin/gmaps_geocache/sua/'.$id)->with('thongbao','Sửa thành công');
 	}
 
-	function getXoa($id){
+	public function getXoa($id){
 		$gmap = Gmaps_geocaches::find($id);	
 		$gmap->delete();
 		return redirect('admin/gmaps_geocache/danhsach')->with('thongbao','Đã xóa thành công');

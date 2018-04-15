@@ -27,8 +27,8 @@
 	                        <th>Address</th>
 	                        <th>Vĩ độ (Latitude)</th>
 	                        <th>Kinh độ (Longitude)</th>
-	                        <th>Delete</th>
-	                        <th>Edit</th>
+	                        <th>Xóa</th>
+	                        <th>Sửa</th>
 	                    </tr>
 	                </thead>
 	                <tbody>

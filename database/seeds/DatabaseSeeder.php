@@ -11,6 +11,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+    	$this->call(userAdmin::class);
         $this->call(diemthamquanSeeder::class);
         $this->call(diemdiSeeder::class);
         $this->call(khachsanSeeder::class);
@@ -23,6 +24,14 @@ class DatabaseSeeder extends Seeder
     }
 
 
+}
+
+class userAdmin extends Seeder{
+	public function run(){
+		DB::table('users')->insert([
+			['name'=>'Admin','email'=>'tranvanchau@gmail.com','password'=>bcrypt('Admin')]
+		]);
+	}
 }
 class diemthamquanSeeder extends Seeder{
 	public function run(){
@@ -72,7 +81,7 @@ class gmapsSeeder extends Seeder{
 		DB::table('gmaps_geocache')->insert([
 			['address'=>'ben ninh kieu can tho','latitude'=>'10.0322005','longitude'=>'105.7879913'],
 			['address'=>'can tho','latitude'=>'10.0451618','longitude'=>'105.7468535'],
-			['address'=>'cho noi cai rang can tho 	','latitude'=>'10.0020535','longitude'=>'105.7441099'],
+			['address'=>'cho noi cai rang can tho 	','latitude'=>'10.0019664','longitude'=>'105.744124'],
 			['address'=>'chua ong can tho','latitude'=>'10.0341757','longitude'=>'105.78844']
 		]);
 	}
@@ -92,7 +101,7 @@ class huongdanvienSeeder extends Seeder{
 class tourSeeder extends Seeder{
 	public function run(){
 		DB::table('tour')->insert([
-				['id_diemdi'=>'1','id_khachsan'=>'1','id_huongdanvien'=>'3','tieude'=>'Hà NỘI - CẦN THƠ - BẾN NINH KIỀU - VƯỜN CÒ- CHÙA ÔNG','tieudekhongdau'=>'hanoi-cantho-benninhkieu-vuonco-chuaong','ngaykhoihanh'=>'2018-05-05','giokhoihanh'=>'04:00:00','noikhoihanh'=>'Bến Xe','giotaptrung'=>'04:30:00','songaydi'=>'2 ngày 1 đêm','socho'=>'18','sochoconlai'=>'18','gioithieu'=>'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero vitae ex quo unde harum pariatur illo tempora incidunt, quasi illum, dolore fugit deserunt mollitia modi cumque reiciendis id voluptatem, ducimus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit architecto, doloremque corporis vel earum deserunt sapiente dolores placeat officia, ipsa consectetur maiores at odio error laboriosam. Impedit consequatur, qui porro!','lichtrinh'=>'
+				['id_diemdi'=>'3','id_khachsan'=>'1','id_huongdanvien'=>'3','tieude'=>'Hà NỘI - CẦN THƠ - BẾN NINH KIỀU - VƯỜN CÒ- CHÙA ÔNG','tieudekhongdau'=>'hanoi-cantho-benninhkieu-vuonco-chuaong','ngaykhoihanh'=>'2018-05-05','giokhoihanh'=>'04:00:00','noikhoihanh'=>'Bến Xe','giotaptrung'=>'04:30:00','songaydi'=>'2 ngày 1 đêm','socho'=>'18','sochoconlai'=>'18','gioithieu'=>'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero vitae ex quo unde harum pariatur illo tempora incidunt, quasi illum, dolore fugit deserunt mollitia modi cumque reiciendis id voluptatem, ducimus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit architecto, doloremque corporis vel earum deserunt sapiente dolores placeat officia, ipsa consectetur maiores at odio error laboriosam. Impedit consequatur, qui porro!','lichtrinh'=>'
 	<h1>Ngày 1</h1>
 	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero vitae ex quo unde harum pariatur illo tempora incidunt, quasi illum, dolore fugit deserunt mollitia modi cumque reiciendis id voluptatem, ducimus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit architecto, doloremque corporis vel earum deserunt sapiente dolores placeat officia, ipsa consectetur maiores at odio error laboriosam. Impedit consequatur, qui porro!
 	<h1>Ngày 2</h1>
@@ -126,7 +135,7 @@ class tourSeeder extends Seeder{
 	- Phòng khách sạn/resort có thể xảy ra trường hợp phòng không gần nhau, không cùng tầng, loại phòng một giường đôi hoặc hai giường đơn không theo yêu cầu, tùy tình hình thực tế từng khách sạn/Resort.
 	- Quý khách dưới 18 tuổi khi đi tour phải có Bố Mẹ hoặc người thân trên 18 tuổi đi cùng. Trường hợp đi một mình phải được Bố Mẹ ủy quyền (có xác nhận của chính quyền địa phương).
 	- Khách nữ từ 55 tuổi trở lên và khách nam từ 60 trở lên: nên có người thân dưới 55 tuổi (đầy đủ sức khỏe) đi cùng. Riêng khách từ 70 tuổi trở lên: Bắt buộc phải có người thân dưới 55 tuổi (đầy đủ sức khỏe) đi cùng và nộp kèm giấy khám sức khỏe, có xác nhận đủ sức khỏe để đi du lịch của bác sĩ + Giấy cam kết sức khỏe theo mẫu qui định của công ty. Vì lý do an toàn Quý khách hạn chế và không nhận khách từ 80 tuổi trở lên. Khách trên 80 tuổi không có chế độ bảo hiểm. ','gianguoilon'=>'3000000','giatreem'=>'500000','giatrenho'=>'0','giaembe'=>'0','giaphongdon'=>'200000'],
-				['id_diemdi'=>'2','id_khachsan'=>'2','id_huongdanvien'=>'2','tieude'=>'HẢI PHÒNG - CẦN THƠ - BẾN NINH KIỀU - VƯỜN CÒ- CHÙA ÔNG','tieudekhongdau'=>'haiphong-cantho-benninhkieu-vuonco-chuaong','ngaykhoihanh'=>'2018-05-07','giokhoihanh'=>'03:30:00','noikhoihanh'=>'Bến Xe','giotaptrung'=>'04:00:00','songaydi'=>'3 ngày 2 đêm','socho'=>'20','sochoconlai'=>'20','gioithieu'=>'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur explicabo esse alias adipisci accusantium illum architecto molestiae harum aperiam sint, magni, qui earum dolore atque cupiditate dolorem error reprehenderit, tempore.','lichtrinh'=>'
+				['id_diemdi'=>'4','id_khachsan'=>'2','id_huongdanvien'=>'2','tieude'=>'HẢI PHÒNG - CẦN THƠ - BẾN NINH KIỀU - VƯỜN CÒ- CHÙA ÔNG','tieudekhongdau'=>'haiphong-cantho-benninhkieu-vuonco-chuaong','ngaykhoihanh'=>'2018-05-07','giokhoihanh'=>'03:30:00','noikhoihanh'=>'Bến Xe','giotaptrung'=>'04:00:00','songaydi'=>'3 ngày 2 đêm','socho'=>'20','sochoconlai'=>'20','gioithieu'=>'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur explicabo esse alias adipisci accusantium illum architecto molestiae harum aperiam sint, magni, qui earum dolore atque cupiditate dolorem error reprehenderit, tempore.','lichtrinh'=>'
 	<h1>Ngày 1</h1>
 	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero vitae ex quo unde harum pariatur illo tempora incidunt, quasi illum, dolore fugit deserunt mollitia modi cumque reiciendis id voluptatem, ducimus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit architecto, doloremque corporis vel earum deserunt sapiente dolores placeat officia, ipsa consectetur maiores at odio error laboriosam. Impedit consequatur, qui porro!
 	<h1>Ngày 2</h1>
@@ -160,7 +169,7 @@ class tourSeeder extends Seeder{
 	- Phòng khách sạn/resort có thể xảy ra trường hợp phòng không gần nhau, không cùng tầng, loại phòng một giường đôi hoặc hai giường đơn không theo yêu cầu, tùy tình hình thực tế từng khách sạn/Resort.
 	- Quý khách dưới 18 tuổi khi đi tour phải có Bố Mẹ hoặc người thân trên 18 tuổi đi cùng. Trường hợp đi một mình phải được Bố Mẹ ủy quyền (có xác nhận của chính quyền địa phương).
 	- Khách nữ từ 55 tuổi trở lên và khách nam từ 60 trở lên: nên có người thân dưới 55 tuổi (đầy đủ sức khỏe) đi cùng. Riêng khách từ 70 tuổi trở lên: Bắt buộc phải có người thân dưới 55 tuổi (đầy đủ sức khỏe) đi cùng và nộp kèm giấy khám sức khỏe, có xác nhận đủ sức khỏe để đi du lịch của bác sĩ + Giấy cam kết sức khỏe theo mẫu qui định của công ty. Vì lý do an toàn Quý khách hạn chế và không nhận khách từ 80 tuổi trở lên. Khách trên 80 tuổi không có chế độ bảo hiểm. ','gianguoilon'=>'2500000','giatreem'=>'400000','giatrenho'=>'0','giaembe'=>'0','giaphongdon'=>'400000'],
-				['id_diemdi'=>'3','id_khachsan'=>'3','id_huongdanvien'=>'1','tieude'=>'HẢI PHÒNG - CẦN THƠ - BẾN NINH KIỀU- CHÙA ÔNG','tieudekhongdau'=>'haiphong-cantho-benninhkieu-chuaong','ngaykhoihanh'=>'2018-06-06','giokhoihanh'=>'12:00:00','noikhoihanh'=>'Bến Xe','giotaptrung'=>'11:30:00','songaydi'=>'2 ngày 1 đêm','socho'=>'15','sochoconlai'=>'15','gioithieu'=>'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt cum deserunt tenetur, quasi ut illum, maiores quod suscipit accusamus, et numquam praesentium voluptatem eum dignissimos molestiae ipsam quas necessitatibus rerum.','lichtrinh'=>'
+				['id_diemdi'=>'1','id_khachsan'=>'3','id_huongdanvien'=>'1','tieude'=>'BẾN TRE - CẦN THƠ - BẾN NINH KIỀU- CHÙA ÔNG','tieudekhongdau'=>'bentre-cantho-benninhkieu-chuaong','ngaykhoihanh'=>'2018-06-06','giokhoihanh'=>'12:00:00','noikhoihanh'=>'Bến Xe','giotaptrung'=>'11:30:00','songaydi'=>'2 ngày 1 đêm','socho'=>'15','sochoconlai'=>'15','gioithieu'=>'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt cum deserunt tenetur, quasi ut illum, maiores quod suscipit accusamus, et numquam praesentium voluptatem eum dignissimos molestiae ipsam quas necessitatibus rerum.','lichtrinh'=>'
 	<h1>Ngày 1</h1>
 	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero vitae ex quo unde harum pariatur illo tempora incidunt, quasi illum, dolore fugit deserunt mollitia modi cumque reiciendis id voluptatem, ducimus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit architecto, doloremque corporis vel earum deserunt sapiente dolores placeat officia, ipsa consectetur maiores at odio error laboriosam. Impedit consequatur, qui porro!
 	<h1>Ngày 2</h1>

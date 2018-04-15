@@ -28,7 +28,7 @@
 	                        <th>Tên Tour</th>
 	                        <th>ID_GMAPS</th>
 	                         <th>Address</th>
-	                        <th>Delete</th>
+	                        <th>Xóa</th>
 	                        
 	                    </tr>
 	                </thead>

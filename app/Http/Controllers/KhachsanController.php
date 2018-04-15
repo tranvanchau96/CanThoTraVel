@@ -8,16 +8,16 @@ use App\Khachsan;
 class KhachsanController extends Controller
 {
     //
-    function getDanhSach(){
+    public function getDanhSach(){
     	$khachsan = Khachsan::all();
     	return view('admin.khachsan.danhsach',['khachsan'=>$khachsan]);
     }
 
-    function getThem(){
+    public function getThem(){
     	return view('admin.khachsan.them');
     }
 
-    function postThem(Request $rq){
+    public function postThem(Request $rq){
     	$this->validate($rq,
     		[
     			'ten'=>'required|unique:khachsan',
@@ -37,11 +37,11 @@ class KhachsanController extends Controller
     	return redirect('admin/khachsan/them')->with('thongbao','Đã thêm thành công');
 	}
 
-	function  getSua($id){
+	public function  getSua($id){
 		$khachsan = Khachsan::find($id);
 		return view('admin.khachsan.sua',['khachsan'=>$khachsan]);
 	}
-	function  postSua(Request $rq, $id){
+	public function  postSua(Request $rq, $id){
 		$khachsan = Khachsan::find($id);
 		$this->validate($rq, 
 			[
@@ -59,7 +59,7 @@ class KhachsanController extends Controller
     	return redirect('admin/khachsan/sua/'.$id)->with('thongbao','Sửa thành công');
 	}
 
-	function getXoa($id){
+	public function getXoa($id){
 		$khachsan = Khachsan::find($id);	
 		$khachsan->delete();
 		return redirect('admin/khachsan/danhsach')->with('thongbao','Đã xóa thành công');

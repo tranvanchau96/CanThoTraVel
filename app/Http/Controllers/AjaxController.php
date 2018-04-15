@@ -11,7 +11,7 @@ use App\Toado;
 class AjaxController  extends Controller
 {
     //
-    function getGmaps($id_tour){
+    public function getGmaps($id_tour){
     	$tour = Tour::all();
     	$toado = Toado::all();
     	$gmaps = Gmaps_geocaches::all();

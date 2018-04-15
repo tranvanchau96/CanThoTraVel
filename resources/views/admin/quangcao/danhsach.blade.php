@@ -24,8 +24,8 @@
 	                        <th>ID</th>
 	                        <th>Ảnh</th>
 	                        <th>URL</th>
-	                        <th>Delete</th>
-	                        <th>Edit</th>
+	                        <th>Xóa</th>
+	                        <th>Sửa</th>
 	                    </tr>
 	                </thead>
 	                <tbody>

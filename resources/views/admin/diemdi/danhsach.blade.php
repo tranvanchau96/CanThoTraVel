@@ -26,7 +26,7 @@
 	                        <th>ID</th>
 	                        <th>Tên điểm đi</th>
 	                        <th>Xóa</th>
-	                        <th>S</th>
+	                        <th>Sửa</th>
 	                    </tr>
 	                </thead>
 	                <tbody>

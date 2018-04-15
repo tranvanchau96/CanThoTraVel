@@ -23,7 +23,7 @@
 	                        <th>Ảnh Thumn1</th>
 	                        <th>Ảnh Thumn2</th>
 	                        
-	                        <th>Edit</th>
+	                        <th>Sửa</th>
 	                    </tr>
 	                </thead>
 	                <tbody>

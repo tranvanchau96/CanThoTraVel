@@ -16,28 +16,28 @@ class PageController extends Controller
     //DÙNG FIND(), FRIST() -> ĐỐI TƯỢNG NÊN CÓ THỂ LẤY THUỘC TÍNH DỄ DÀNG
 
 
-    function index(){
+    public function index(){
     	$tour = Tour::orderBy('id','desc')->take(4)->get();
     	return view('pages.index',['tour'=>$tour]);
     }
-    function tourtim($id){
+    public function tourtim($id){
     	$tour = Tour::where('id_diemdi',$id)->orderBy('id','desc')->get();
        $diemdi = Diemdi::orderBy('tendiemdi')->get();
 
     	return view('pages.toursearch',['tour'=>$tour,'diemdi'=>$diemdi]);
     }
-    function tour(){
+    public function tour(){
         $tour = Tour::orderBy('id','desc')->get();
         $diemdi = Diemdi::orderBy('tendiemdi')->get();
         return view('pages.tour',['tour'=>$tour,'diemdi'=>$diemdi]);
     }
 
-    function thamquan(){
+    public function thamquan(){
         $thamquan = Diemthamquan::all();
         return view('pages.thamquan',['thamquan'=>$thamquan]);
     }
 
-    function chitiettour($id){
+    public function chitiettour($id){
         // $gmaps_geocache = Gmaps_geocaches::where('id_tour',$id)->get();
         $toado = Toado::where('id_tour',$id)->get();
         $tour = Tour::find($id);
@@ -68,20 +68,20 @@ class PageController extends Controller
         return view('pages.chitiettour',['tour'=> $tour,'tourmoinhat'=>  $tourmoinhat,'diemthamquandexuat'=>$diemthamquandexuat])->with('map',$map);
     }
 
-    function diemthamquan($id){
+    public function diemthamquan($id){
         $diemthamquan = Diemthamquan::find($id);
         $diemthamquandexuat = Diemthamquan::inRandomOrder()->take(3)->get();
 
         return view('pages.diemthamquan',['diemthamquan'=>$diemthamquan,'diemthamquandexuat'=>$diemthamquandexuat]);
     }
 
-    function dattour($id){
+   public  function dattour($id){
         $tour = Tour::find($id);
         $tourmoinhat=Tour::orderBy('id','desc')->take(3)->get();
         $diemthamquandexuat = Diemthamquan::inRandomOrder()->take(3)->get();
         return view('pages.dattour',['tour'=> $tour,'tourmoinhat'=>  $tourmoinhat,'diemthamquandexuat'=>$diemthamquandexuat]);
     }
-      function insert(Request $rq, $id){
+     public  function insert(Request $rq, $id){
         $tour = Tour::find($id);
         $dattour  = new Dattour;
         $dattour->id_tour = $tour->id;
@@ -97,6 +97,13 @@ class PageController extends Controller
         $dattour->embe = $rq->soembe;
         $dattour->phongdon = $rq->phongdon;
         $dattour->tongcho =  $rq->songuoilon + $rq->sotreem + $rq->sotrenho + $rq->soembe;
+
+        if ($dattour->tongcho > $tour->sochoconlai){
+            return redirect()->back()->with('alert', 'Số chỗ bạn đặt vượt quá số chỗ cho phép');
+        }
+        else{
+
+
         $dattour->tongtien =  $rq->songuoilon*$tour->gianguoilon + $rq->sotreem*$tour->giatreem + $rq->sotrenho*$tour->giatrenho + $rq->soembe*$tour->giaembe + $rq->phongdon*$tour->giaphongdon;
         $dattour->hinhthucthanhtoan = $rq->htthanhtoan;
         $dattour->trangthaithanhtoan = "Chưa thanh toán";
@@ -105,9 +112,10 @@ class PageController extends Controller
         $tour->sochoconlai = $tour->sochoconlai - $dattour->tongcho;
         $tour->save();
         return redirect()->route('success',[$id]);
+        }
     }
 
-    function success($id){
+   public  function success($id){
         $tour = Tour::find($id);
         
         $tourmoinhat=Tour::orderBy('id','desc')->take(3)->get();

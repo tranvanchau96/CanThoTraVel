@@ -9,15 +9,15 @@ use App\Storage;
 class QuangcaoController extends Controller
 {
     //
-    function getDanhSach(){
+    public function getDanhSach(){
     	$quangcao = Quangcao::all();
     	return view('admin.quangcao.danhsach',['quangcao'=>$quangcao]);
     }
-    function getThem(){
+    public function getThem(){
     	
     	return view('admin.quangcao.them');
     }
-    function postThem(Request $rq){
+    public function postThem(Request $rq){
     	$this->validate($rq,
     		[
     			'anh'=>'required|image:jpg,jpeg, png, bmp, gif, svg',
@@ -47,11 +47,11 @@ class QuangcaoController extends Controller
     	return redirect('admin/quangcao/them')->with('thongbao','Đã thêm thành công');
     }
 
-    function getSua($id){
+   public function getSua($id){
     	$quangcao = Quangcao::find($id);
     	return view('admin.quangcao.sua',['quangcao'=>$quangcao]);
     }
-    function postSua(Request $rq, $id){
+    public function postSua(Request $rq, $id){
     	$quangcao = Quangcao::find($id);
     	$quangcao->id = $rq->id;
 
@@ -70,7 +70,7 @@ class QuangcaoController extends Controller
     	$quangcao->save();
     	return redirect('admin/quangcao/sua/'.$id)->with('thongbao','Sửa thành công');
     }
-    function getXoa($id){
+    public function getXoa($id){
     	$quangcao = Quangcao::find($id);
     	$quangcao->delete();
 

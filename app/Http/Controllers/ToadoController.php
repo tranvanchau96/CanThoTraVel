@@ -10,7 +10,7 @@ use App\Gmaps_geocaches;
 class toadoController extends Controller
 {
     //
-    function getDanhSach(){
+    public function getDanhSach(){
     	$toado = Toado::all();
     	// $tour = Tour::all();
     	// $gmaps = Gmaps_geocaches::all();
@@ -18,14 +18,14 @@ class toadoController extends Controller
     }
     // ,'tour'=>$tour,'gmaps'=>$gmaps
 
-    function getThem(){
+    public function getThem(){
     	$toado = Toado::all();
     	$tour = Tour::all();
     	$gmaps = Gmaps_geocaches::all();
     	return view('admin.toado.them',['toado'=>$toado,'tour'=>$tour,'gmaps'=>$gmaps]);
     }
 
-    function postThem(Request $rq){
+    public function postThem(Request $rq){
     	
     	$toado = new Toado;
     	$toado->id_tour = $rq->tour;
@@ -36,7 +36,7 @@ class toadoController extends Controller
 	}
 
 
-	function getXoa($id){
+	public function getXoa($id){
 		$toado = Toado::find($id);	
 		$toado->delete();
 		return redirect('admin/toado/danhsach')->with('thongbao','Đã xóa thành công');

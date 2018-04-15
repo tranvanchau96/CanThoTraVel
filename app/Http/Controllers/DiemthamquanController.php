@@ -8,15 +8,15 @@ use App\Diemthamquan;
 class DiemthamquanController extends Controller
 {
     //
-    function getDanhSach(){
+    public function getDanhSach(){
     	$diemthamquan = Diemthamquan::all();
     	return view('admin.diemthamquan.danhsach',['diemthamquan'=>$diemthamquan]);
     }
-    function getThem(){
+    public function getThem(){
     	
     	return view('admin.diemthamquan.them');
     }
-    function postThem(Request $rq){
+    public function postThem(Request $rq){
     	$this->validate($rq,
     		[
     			'ten'=>'required',
@@ -194,12 +194,12 @@ class DiemthamquanController extends Controller
  		$diemthamquan->save();
     	return redirect('admin/diemthamquan/them')->with('thongbao','Đã thêm thành công');
     }
-    function getSua($id){
+    public function getSua($id){
     	$diemthamquan = Diemthamquan::find($id);
     	return view('admin.diemthamquan.sua',['diemthamquan'=>$diemthamquan]);
     }
 
-    function postSua(Request $rq, $id){
+    public function postSua(Request $rq, $id){
 		$diemthamquan = Diemthamquan::find($id);
 		$diemthamquan->id = $rq->id;
 		$diemthamquan->ten = $rq->ten;
@@ -335,7 +335,7 @@ class DiemthamquanController extends Controller
  		$diemthamquan->save();
 		return redirect('admin/diemthamquan/sua/'.$id)->with('thongbao','Sửa thành công');
     }
-    function getXoa($id){
+    public function getXoa($id){
     	$diemthamquan = Diemthamquan::find($id);
     	$diemthamquan->delete();
 

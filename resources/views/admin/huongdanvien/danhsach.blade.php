@@ -27,8 +27,8 @@
 	                        <th>Họ Tên</th>
 	                        <th>Số điện thoại</th>
 	                        <th>Địa chỉ</th>
-	                        <th>Delete</th>
-	                        <th>Edit</th>
+	                        <th>Xóa</th>
+	                        <th>Sửa</th>
 	                    </tr>
 	                </thead>
 	                <tbody>
@@ -38,7 +38,7 @@
 	                        <td>{{$hdv->hoten}}</td>
 	                        <td>{{$hdv->sodienthoai}}</td>
 	                        <td>{{$hdv->diachi}}</td>
-	                        <td class="center"><i class="fa fa-trash-o  fa-fw"></i><a href="admin/huongdanvien/xoa/{{$hdv->id}}"> Xóa</a></td>
+	                        <td class="center"><i class="fa fa-trash-o  fa-fw"></i><a href="admin/huongdanvien/xoa/{{$hdv->id}}">Xóa</a></td>
 	                        <td class="center"><i class="fa fa-pencil fa-fw"></i> <a href="admin/huongdanvien/sua/{{$hdv->id}}">Sửa</a></td>
 	                    </tr>
 	                    @endforeach

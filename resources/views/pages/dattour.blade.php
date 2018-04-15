@@ -19,7 +19,13 @@
 	<script src="js/tour-chi-tiet.js"></script>
 	<script src="js/dat-tour.js"></script>
 	<title>Đặt tour</title>
-	
+	<script>
+		var msg = '{{Session::get('alert')}}';
+		var exist = '{{Session::has('alert')}}';
+		if(exist){
+			alert(msg);
+		}
+	</script>
 </head>
 <body>
 	<div class="wrapper-tour-ct">
@@ -81,7 +87,11 @@
 						<p>THÔNG TIN ĐẶT TOUR</p>
 					</div>
 					<div class="dt-form">
-						
+						@if (session('alert'))
+					    <div class="alert alert-success">
+					        {{ session('alert') }}
+					    </div>
+						@endif
 							<form action="insert/{{$tour->id}}" method="post">
 								<input type="hidden" name="_token" value="{{csrf_token()}}">
 								<label for="hoten">Họ tên</label>
@@ -114,7 +124,7 @@
 								<input type="text" id="tongcho" class="tongcho" readonly disabled>
 								<br>
 								<label for="ghichu">Ghi chú</label>
-								<textarea placeholder="Note.."  id="ghichu" name="ghichu" >
+								<textarea placeholder="Note.." required  id="ghichu" name="ghichu" >
 								</textarea>
 								
 								<!--  -->

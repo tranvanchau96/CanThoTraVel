@@ -1,0 +1,10 @@
+body {
+	background-image: url(../images/bg/chambi.png);
+	background-color: #fffcf9;
+}
+table th {
+	text-align: center;
+}
+.navbar-default{
+background: rgba(240, 240, 240, 0.8);
+}

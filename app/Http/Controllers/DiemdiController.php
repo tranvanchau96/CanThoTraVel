@@ -9,17 +9,17 @@ use App\Tour;
 class DiemdiController extends Controller
 {
     //
-    function getDanhSach(){
+    public function getDanhSach(){
     	$diemdi = Diemdi::all();
     	return view('admin.diemdi.danhsach',['diemdi'=>$diemdi]);
     }
 
-    function getThem(){
+    public function getThem(){
     	$diemdi = Diemdi::all();
     	return view('admin.diemdi.them');
     }
 
-    function postThem(Request $rq){
+    public function postThem(Request $rq){
     	$this->validate($rq,
     		[
     			'tendiemdi'=>'required|unique:diemdi'
@@ -34,11 +34,11 @@ class DiemdiController extends Controller
 
     	return redirect('admin/diemdi/them')->with('thongbao','Đã thêm thành công');
 	}
-	function getSua($id){
+	public function getSua($id){
 		$diemdi = Diemdi::find($id);
 		return view('admin.diemdi.sua',['diemdi'=>$diemdi]);
 	}
-	function postSua(Request $rq, $id){
+	public function postSua(Request $rq, $id){
 		$diemdi = Diemdi::find($id);
 		$this->validate($rq,
     		[
@@ -53,7 +53,7 @@ class DiemdiController extends Controller
 
 		return redirect('admin/diemdi/sua/'.$id)->with('thongbao','Đã sửa thành công');
 	}
-	function getXoa($id){
+	public function getXoa($id){
 		$diemdi = Diemdi::find($id);
 		$diemdi->delete();
 

@@ -23,8 +23,8 @@ class Dattour extends Migration
             $table->string('diachi',255);
             $table->string('sodienthoai',255);
             $table->string('email',30);
-            $table->datetime('ngaydat');
-            $table->text('ghichu',64000);
+            $table->date('ngaydat');
+            $table->text('ghichu',64000)->nullable();
             $table->integer('nguoilon');
             $table->integer('treem');
             $table->integer('trenho');

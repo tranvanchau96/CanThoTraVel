@@ -85,6 +85,12 @@
                             <input class="form-control" name="socho" placeholder="Please Enter Category Order" required />
                         </div>
                         <div class="form-group">
+                            <label>Giới thiệu</label>
+                            <textarea  class="form-control" name="gioithieu" rows="10" required />
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias consequatur tenetur iure earum amet expedita optio odit sunt, provident, temporibus ipsum hic rerum minima culpa quasi incidunt! Ipsam, tempore, magnam?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias consequatur tenetur iure earum amet expedita optio odit sunt, provident, temporibus ipsum hic rerum minima culpa quasi incidunt! Ipsam, tempore, magnam?
+                            </textarea>
+                        </div>
+                        <div class="form-group">
                             <label>Lịch trình</label>
                             <textarea  class="form-control" name="lichtrinh" rows="25" required />
 <h1>Ngày 1</h1>
@@ -147,12 +153,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur reiciendis
                             <label>Giá phòng đơn</label>
                             <input class="form-control" name="giaphongdon" placeholder="Please Enter Category Order" required />
                         </div>
-                        <div class="form-group">
-                            <label>Giới thiệu</label>
-                            <textarea  class="form-control" name="gioithieu" rows="10" required />
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias consequatur tenetur iure earum amet expedita optio odit sunt, provident, temporibus ipsum hic rerum minima culpa quasi incidunt! Ipsam, tempore, magnam?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias consequatur tenetur iure earum amet expedita optio odit sunt, provident, temporibus ipsum hic rerum minima culpa quasi incidunt! Ipsam, tempore, magnam?
-                            </textarea>
-                        </div>
+                        
                         
                         <button type="submit" class="btn btn-default">Thêm</button>
                         <button type="reset" class="btn btn-default">Làm lại</button>

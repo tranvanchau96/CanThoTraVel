@@ -73,17 +73,19 @@
 
 	                    <div class="form-group">
                             @foreach($gmaps as $gm)
-                            	@if($gm->id == 3)
+                            	@if($gm->id == 2)
                             		<div class="checkbox">
-							  		<label><input type="checkbox" disabled value="{{$gm->id}}">{{$gm->address}}</label>
+							  			<label><input type="checkbox" disabled value="{{$gm->id}}">{{$gm->address}}</label>
+							  		</div>
+
 							  	@else
-							  	<div class="checkbox">
-							  		<label><input type="checkbox" name="id_gmaps[]" value="{{$gm->id}}">{{$gm->address}}</label>
-								</div>
+								  	<div class="checkbox">
+								  		<label><input type="checkbox" name="id_gmaps[]" value="{{$gm->id}}">{{$gm->address}}</label>
+									</div>
 								@endif
 							@endforeach
                         </div>
-
+                    
                         <button type="submit" class="btn btn-default">Thêm</button>
                         <button type="reset" class="btn btn-default">Làm lại</button>
                     <form>

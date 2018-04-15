@@ -8,17 +8,17 @@ use App\Huongdanvien;
 class HuongdanvienController extends Controller
 {
     //
-    function getDanhSach(){
+    public function getDanhSach(){
     	$huongdanvien = Huongdanvien::all();
     	return view('admin.huongdanvien.danhsach',['huongdanvien'=>$huongdanvien]);
     }
 
-    function getThem(){
+    public function getThem(){
     	$huongdanvien = Huongdanvien::all();
     	return view('admin.huongdanvien.them');
     }
 
-    function postThem(Request $rq){
+    public function postThem(Request $rq){
     	$this->validate($rq,
     		[
     			'hoten'=>'required',
@@ -40,11 +40,11 @@ class HuongdanvienController extends Controller
     	return redirect('admin/huongdanvien/them')->with('thongbao','Đã thêm thành công');
 	}
 
-	function  getSua($id){
+	public function  getSua($id){
 		$huongdanvien = Huongdanvien::find($id);
 		return view('admin.huongdanvien.sua',['huongdanvien'=>$huongdanvien]);
 	}
-	function  postSua(Request $rq, $id){
+	public function  postSua(Request $rq, $id){
 		$huongdanvien = Huongdanvien::find($id);
 		$this->validate($rq, 
 			[
@@ -65,7 +65,7 @@ class HuongdanvienController extends Controller
     	return redirect('admin/huongdanvien/sua/'.$id)->with('thongbao','Sửa thành công');
 	}
 
-	function getXoa($id){
+	public function getXoa($id){
 		$huongdanvien = Huongdanvien::find($id);	
 		$huongdanvien->delete();
 		return redirect('admin/huongdanvien/danhsach')->with('thongbao','Đã xóa thành công');

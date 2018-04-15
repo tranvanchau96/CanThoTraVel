@@ -42,9 +42,13 @@ Route::post('insert/{id}','PageController@insert');
 Route::get('success/{id}.html','PageController@success')->name('success');
 
 
+Route::get('admin/login','UserController@getLogin');
+Route::post('admin/login','UserController@postLogin');
+
+Route::get('admin/logout','UserController@getLogout');
 
 
-Route::group(['prefix'=>'admin'], function(){
+Route::group(['prefix'=>'admin','middleware'=>'adminLogin'], function(){
 	
 	Route::group(['prefix'=>'anhtour'], function(){
 		Route::get('danhsach','AnhtourController@getDanhSach');
@@ -55,8 +59,12 @@ Route::group(['prefix'=>'admin'], function(){
 
 	Route::group(['prefix'=>'dattour'], function(){
 		Route::get('danhsach','DattourController@getDanhSach');
-		Route::get('sua','DattourController@getSua');
-		Route::get('them','DattourController@getThem');
+
+		Route::get('sua/{id}','DattourController@getSua');
+		Route::post('sua/{id}','DattourController@postSua');
+
+		Route::get('xoa/{id}','DattourController@getXoa');
+		
 	});
 
 	Route::group(['prefix'=>'diemdi'], function(){
@@ -131,7 +139,9 @@ Route::group(['prefix'=>'admin'], function(){
 
 	Route::group(['prefix'=>'tour'], function(){
 		Route::get('danhsach','TourController@getDanhSach');
-		Route::get('sua','TourController@getSua');
+		
+		Route::get('sua/{id}','TourController@getSua');
+		Route::post('sua/{id}','TourController@postSua');
 
 		Route::get('them','TourController@getThem');
 		Route::post('them','TourController@postThem');

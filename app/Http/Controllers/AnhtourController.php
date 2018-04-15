@@ -13,11 +13,11 @@ class AnhtourController extends Controller
     	$anhtour = Anhtour::all();
     	return view('admin.anhtour.danhsach',['anhtour'=>$anhtour]);
     }
-    function  getSua($id){
+    public function  getSua($id){
         $anhtour = Anhtour::find($id);
         return view('admin.anhtour.sua',['anhtour'=>$anhtour]);
     }
-    function  postSua(Request $rq, $id){
+    public function  postSua(Request $rq, $id){
         $anhtour = Anhtour::find($id);
         // $this->validate($rq, 
         //     [
@@ -31,7 +31,7 @@ class AnhtourController extends Controller
                 
         //         'diachi.required' => 'Bạn chưa nhập địa chỉ',
         //     ]);
-        $anhtour->id_tour = $rq->id_tour;
+        // $anhtour->id_tour = $rq->id_tour;
         
         if($rq->hasFile('bg1')){
             $file = $rq->file('bg1');

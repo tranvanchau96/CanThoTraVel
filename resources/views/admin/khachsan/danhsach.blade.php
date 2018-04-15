@@ -27,8 +27,8 @@
 	                        <th>Tên khách sạn</th>
 	                        <th>Tên không dấu</th>
 	                        <th>url</th>
-	                        <th>Delete</th>
-	                        <th>Edit</th>
+	                        <th>Xóa</th>
+	                        <th>Sửa</th>
 	                    </tr>
 	                </thead>
 	                <tbody>
